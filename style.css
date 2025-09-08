@@ -281,9 +281,13 @@ body {
 
 @keyframes wave {
     0% { transform: perspective(1000px) rotateY(0deg) translateX(0px); }
-    25% { transform: perspective(100px) rotateY(15deg) translateX(0px); }
+    10% { transform: perspective(1000px) rotateY(10deg) translateX(0px); }
+    25% { transform: perspective(1000px) rotateY(20deg) translateX(0px); }
+    40% { transform: perspective(1000px) rotateY(10deg) translateX(0px); }
     50% { transform: perspective(1000px) rotateY(0deg) translateX(0px); }
-    75% { transform: perspective(100px) rotateY(-15deg) translateX(0px); }
+    60% { transform: perspective(1000px) rotateY(-10deg) translateX(0px); }
+    75% { transform: perspective(1000px) rotateY(-20deg) translateX(0px); }
+    90% { transform: perspective(1000px) rotateY(-10deg) translateX(0px); }
     100% { transform: perspective(1000px) rotateY(0deg) translateX(0px); }
 }
 
@@ -354,6 +358,7 @@ body {
     cursor: pointer;
     z-index: 20;
 }
+
 
 
 
