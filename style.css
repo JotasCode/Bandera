@@ -241,7 +241,7 @@ body {
 .top { width: 50%; height: 50%; top: 0; left: 0; }
 .bottom { width: 50%; height: 50%; bottom: 0; right: 0; }
 .left { width: 50%; height: 50%; top: 0; right: 0; }
-.right { width: 50%; height: 50%; bottom: 0; left: 0; }
+.right { width: 10%; height: 10%; bottom: 0; left: 0; }
 
 .white-cross {
     position: absolute;
@@ -354,4 +354,5 @@ body {
     cursor: pointer;
     z-index: 20;
 }
+
 
