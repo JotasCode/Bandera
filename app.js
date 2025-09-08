@@ -16,10 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleButton.addEventListener('click', () => {
         body.classList.toggle('night-mode');
         if (body.classList.contains('night-mode')) {
-            toggleButton.textContent = 'Día';
+            toggleButton.textContent = 'Cambiar a Día';
         } else {
-            toggleButton.textContent = 'Noche';
+            toggleButton.textContent = 'Cambiar a Noche';
         }
     });
 });
+
 
