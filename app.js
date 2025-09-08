@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
         coatOfArmsModal.style.display = 'none';
     });
 
-    // Nuevo código para el botón
     toggleButton.addEventListener('click', () => {
         body.classList.toggle('night-mode');
         if (body.classList.contains('night-mode')) {
@@ -22,6 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+});
+
 
 
 
