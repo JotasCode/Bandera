@@ -283,7 +283,6 @@ body {
     0% { transform: perspective(1000px) rotateY(0deg) translateX(0px); }
     25% { transform: perspective(1000px) rotateY(25deg) translateX(0px); }
     75% { transform: perspective(1000px) rotateY(-25deg) translateX(0px); }
-    100% { transform: perspective(1000px) rotateY(0deg) translateX(0px); }
 }
 
 .mountain {
@@ -353,6 +352,7 @@ body {
     cursor: pointer;
     z-index: 20;
 }
+
 
 
 
