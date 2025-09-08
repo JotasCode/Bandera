@@ -280,6 +280,22 @@ body {
     transition: transform 0.3s ease;
 }
 
+/* CAMBIO: Estilos para el enlace de la bandera */
+.flag-info-link {
+    position: absolute;
+    top: 5px; /* Ajusta esto para colocarlo donde prefieras en la parte superior */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.8em;
+    z-index: 4; /* Para que esté sobre el escudo si se superpone */
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+}
+
 @keyframes wave {
     0% { transform: perspective(1000px) rotateY(0deg) translateX(0px); }
     25% { transform: perspective(1000px) rotateY(15deg) translateX(0px); }
@@ -379,5 +395,3 @@ body {
     cursor: pointer;
     z-index: 20;
 }
-
-
