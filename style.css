@@ -6,6 +6,7 @@ body {
     align-items: center; 
     min-height: 100vh;
     background-color: #87CEEB;
+    transition: background-color 1s ease;
 }
 
 .sky {
@@ -15,6 +16,7 @@ body {
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, #87CEEB, #A7D7EF);
+    transition: background 1s ease;
 }
 
 .sun {
@@ -28,6 +30,7 @@ body {
     box-shadow: 0 0 40px 15px #FFD700, 0 0 60px 25px #FFA500;
     animation: pulse 2s infinite alternate;
     z-index: 1;
+    transition: background 1s ease, box-shadow 1s ease;
 }
 
 @keyframes pulse {
@@ -48,6 +51,7 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     opacity: 0.8;
     z-index: 2;
+    transition: background 1s ease, opacity 1s ease;
 }
 
 .cloud::before,
@@ -288,9 +292,8 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100px;
+    height: 450px;
     background: linear-gradient(to top, #0A6640, #38761D); 
-    /* CAMBIO: clip-path para montañas redondas */
     clip-path: ellipse(50% 100% at 50% 100%);
     z-index: 5;
 }
@@ -315,3 +318,39 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
+/* Nuevos estilos para el modo noche */
+.night-mode {
+    background-color: #121222;
+}
+
+.night-mode .sky {
+    background: linear-gradient(to bottom, #121222, #4A4A6A);
+}
+
+.night-mode .sun {
+    background: radial-gradient(circle, #E0E0E0, #B0B0C0);
+    box-shadow: 0 0 20px 5px #B0B0C0, 0 0 40px 10px #E0E0E0;
+}
+
+.night-mode .cloud {
+    background: #A0A0B0;
+    opacity: 0.4;
+}
+
+.night-mode .cloud::before,
+.night-mode .cloud::after {
+    background: #A0A0B0;
+}
+
+#toggleButton {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 20;
+}
