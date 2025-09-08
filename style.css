@@ -6,7 +6,7 @@ body {
     align-items: center; 
     min-height: 100vh;
     background-color: #87CEEB;
-    transition: background-color 2.5s ease;
+    transition: background-color 1s ease;
 }
 
 .sky {
@@ -16,7 +16,7 @@ body {
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, #87CEEB, #A7D7EF);
-    transition: background 2.5s ease;
+    transition: background 1s ease;
 }
 
 .sun {
@@ -30,7 +30,7 @@ body {
     box-shadow: 0 0 40px 15px #FFD700, 0 0 60px 25px #FFA500;
     animation: pulse 2s infinite alternate;
     z-index: 1;
-    transition: background 2.5s ease, box-shadow 2.5s ease;
+    transition: background 1s ease, box-shadow 1s ease;
 }
 
 @keyframes pulse {
@@ -51,7 +51,7 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     opacity: 0.8;
     z-index: 2;
-    transition: background 2.5s ease, opacity 2.5s ease;
+    transition: background 1s ease, opacity 1s ease;
 }
 
 .cloud::before,
@@ -222,13 +222,14 @@ body {
 .flag {
     position: absolute;
     left: calc(50% + 10px); 
-    top: 30px; 
+    top: 30px; /* Posición inicial, al inicio del asta */
     width: 320px;
     height: 180px;
     transform-origin: 0% 50%; 
     overflow: hidden;
     perspective: 1000px;
     animation: wave 4s infinite ease-in-out;
+    transition: top 1s ease-in-out; /* Transición suave para el movimiento */
 }
 
 .flag div {
@@ -281,9 +282,9 @@ body {
 
 @keyframes wave {
     0% { transform: perspective(1000px) rotateY(0deg) translateX(0px); }
-    25% { transform: perspective(1000px) rotateY(-25deg) translateX(0px); }
+    25% { transform: perspective(1000px) rotateY(15deg) translateX(0px); }
     50% { transform: perspective(1000px) rotateY(0deg) translateX(0px); }
-    75% { transform: perspective(1000px) rotateY(25deg) translateX(0px); }
+    75% { transform: perspective(1000px) rotateY(-15deg) translateX(0px); }
     100% { transform: perspective(1000px) rotateY(0deg) translateX(0px); }
 }
 
@@ -342,6 +343,11 @@ body {
     background: #A0A0B0;
 }
 
+/* CAMBIO: La bandera desciende en modo noche */
+.night-mode .flag {
+    top: calc(100% - 180px - 30px); /* 100% de la altura del asta - altura de la bandera - altura de la base */
+}
+
 #toggleButton {
     position: fixed;
     bottom: 20px;
@@ -354,24 +360,3 @@ body {
     cursor: pointer;
     z-index: 20;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
