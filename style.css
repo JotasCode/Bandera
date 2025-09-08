@@ -171,25 +171,62 @@ body {
 .flag-container {
     position: relative;
     display: flex;
-    align-items: flex-start;
+    /* CAMBIO: Quitamos align-items flex-start para controlar el asta manualmente */
+    /* align-items: flex-start; */
     z-index: 10;
 }
 
 .pole {
-    width: 20px; 
-    background-color: #5A4C40;
-    position: relative;
-    z-index: 10;
+    position: relative; /* Para posicionar sus hijos */
+    width: 30px; /* Ancho total del asta */
     height: calc(3 * 180px);
+    z-index: 10;
+    /* Centramos el asta en el flag-container */
+    margin: 0 auto; 
+}
+
+.pole-base {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px; /* Base más ancha */
+    height: 30px;
+    background-color: #5A4C40; /* Mismo color */
+    border-radius: 5px 5px 0 0; /* Bordes redondeados en la parte superior */
+}
+
+.pole-main {
+    position: absolute;
+    bottom: 30px; /* Encima de la base */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px; /* Grosor del asta principal */
+    height: calc(100% - 60px); /* Altura dinámica */
+    background-color: #5A4C40;
+}
+
+.pole-top {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px; /* Parte superior decorativa */
+    height: 30px;
+    background-color: #5A4C40;
+    border-radius: 50%; /* Forma redonda */
+    box-shadow: inset 0 3px 5px rgba(0,0,0,0.3);
 }
 
 .flag {
     position: absolute;
-    left: 20px; 
-    top: 0;
+    /* CAMBIO: Pegamos la bandera al lado derecho del asta principal */
+    left: calc(50% + 10px); /* Ancho del pole-main / 2 + un poco de separación */
+    top: 30px; /* Para que empiece debajo del pole-top */
     width: 320px;
     height: 180px;
-    transform-origin: left center;
+    /* IMPORTANTE: Transform origin para que ondee desde el asta */
+    transform-origin: 0% 50%; 
     overflow: hidden;
     perspective: 1000px;
     animation: wave 4s infinite ease-in-out;
