@@ -308,7 +308,7 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 250%;
     height: 250px;
     background: linear-gradient(to top, #0A6640, #38761D); 
     clip-path: ellipse(50% 100% at 50% 100%);
@@ -395,4 +395,5 @@ body {
     cursor: pointer;
     z-index: 20;
 }
+
 
