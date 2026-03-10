@@ -1,2 +1,2 @@
 # Bandera
-Bandera de la República Dominicana en html, css y js.
+La bandera de la República Dominicana realizada con HTML, CSS y JavaScript.
